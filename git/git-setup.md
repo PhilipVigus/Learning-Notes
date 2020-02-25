@@ -1,3 +1,5 @@
+[Main TOC](../README.md) / [git TOC](./git-TOC.md)
+
 # Setting git up after you've first installed it
 
 You need to run several commands if you've just installed it on your system:
