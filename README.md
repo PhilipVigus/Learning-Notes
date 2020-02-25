@@ -6,5 +6,6 @@ This is a collection of  notes, observations and reminders from the various diff
  
  - [Markdown](./markdown/markdown.md)
  - [git](./git/git-TOC.md)
+ - [GitHub collaboration](./github/github-collaboration.md)
  - Javascript
 - Ruby
