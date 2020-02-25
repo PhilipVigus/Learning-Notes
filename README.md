@@ -4,7 +4,7 @@ This is a collection of  notes, observations and reminders from the various diff
 ----
 **Table of Contents**
  
- - Markdown
+ - [Markdown](./markdown/markdown.md)
  - git
  - Javascript
 - Ruby
