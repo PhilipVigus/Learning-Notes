@@ -5,6 +5,6 @@ This is a collection of  notes, observations and reminders from the various diff
 **Table of Contents**
  
  - [Markdown](./markdown/markdown.md)
- - git
+ - [git](./git/git-TOC.md)
  - Javascript
 - Ruby
