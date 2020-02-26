@@ -1,4 +1,4 @@
-[Main TOC](../README.md) / [Ruby](./ruby-TOC.md)
+[Main TOC](../README.md) / [Ruby TOC](./ruby-TOC.md)
 # Ruby gems
 Gems are reusable code libraries and there are many, many available. They carry out a similar role to the Node packages in Javascript.
 #### Installation
