@@ -10,7 +10,7 @@ puts "true" if i < 0
 puts "false" unless j > 1
 
 # Ternary operator
-puts i == 0 ? "i is 0" : "i is not 0
+puts i == 0 ? "i is 0" : "i is not 0"
 
 # Standard conditional
 if a == 3
