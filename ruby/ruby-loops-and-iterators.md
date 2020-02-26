@@ -37,5 +37,8 @@ hash.each do |key, value| # or each_val/each_key
   puts value
 end
 
+# Prefer brackets when everything is on one line
+arr.map { |ele| ele.to_s }
+
 # etc etc
 ```
