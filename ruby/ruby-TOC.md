@@ -21,6 +21,7 @@
 * [Strings](./ruby-strings.md)
 * [Symbols](./ruby-symbols.md)
 * [Hashes](./ruby-hashes.md)
+* [Asserts](./ruby-asserts.md)
 * [OOP](./ruby-oop.md)
 * [Modules](.ruby-modules.md)
 * [Gems](./ruby-gems.md)
