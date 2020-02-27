@@ -13,7 +13,7 @@
 * [Mutable/Immutable objects](./ruby-mutable-immutable-objects.md)
 * [Methods](./ruby-methods.md)
 * [Blocks](./ruby-blocks.md)
-* [Procs and lambdas](./ruby-procs-and-lambdas.md)
+* [Lambdas and procs](./ruby-procs-and-lambdas.md)
 * [Self](./ruby-self.md)
 * [Scope](./ruby-scope.md)
 * [Objects](./ruby-objects.md)
