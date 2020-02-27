@@ -38,7 +38,7 @@ def print_to_screen(str1:, str2:)
   puts str1 + str2
 end
 # called with arguments in any order and clearly defines the argument meanings
-print_to_screen(str2: "this is string 2", str1: "this is string 1)
+print_to_screen(str2: "this is string 2", str1: "this is string 1")
 
 # variable numbers of arguments
 # strings is passed as an array of arguments
