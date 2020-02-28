@@ -4,7 +4,7 @@ This is a collection of  notes, observations and reminders from the various diff
 ----
 **Table of Contents**
  
- - [Working practices and concepts](./working-practices/working-practices-TOC.md)
+ - [Working practices](./working-practices/working-practices-TOC.md)
  - [Markdown](./markdown/markdown.md)
  - [git](./git/git-TOC.md)
  - [GitHub](./github/github-TOC.md)
