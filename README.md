@@ -7,6 +7,6 @@ This is a collection of  notes, observations and reminders from the various diff
  - [Working practices and concepts](./working-practices/working-practices-TOC.md)
  - [Markdown](./markdown/markdown.md)
  - [git](./git/git-TOC.md)
- - [GitHub collaboration](./github/github-collaboration.md)
+ - [GitHub](./github/github-TOC.md)
  - Javascript
 - [Ruby](./ruby/ruby-TOC.md)

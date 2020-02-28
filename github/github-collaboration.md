@@ -1,4 +1,4 @@
-[Main TOC](../README.md)
+[Main TOC](../README.md) / [GitHub TOC](./github-TOC.md)
 # GitHub collaboration
 1. In order to collaborate with one or more partners:
 2. Create the repo on your computer
