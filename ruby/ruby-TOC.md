@@ -6,6 +6,7 @@
 * [Types](./ruby-types.md)
 * [Constants](./ruby-constants.md)
 * [Operators](./ruby-operators.md)
+* [Parallel assignment](./ruby-parallel-assignment.md)
 * [Truthy and falsy](./ruby-truthy-and-falsy.md)
 * [Control flows](./ruby-control-flows.md)
 * [Loops and iterators](./ruby-loops-and-iterators.md)
