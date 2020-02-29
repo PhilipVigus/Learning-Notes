@@ -64,3 +64,13 @@ def convert_words_to_caps(words)
   arr.map { |word| word.upcase }
 end
 ```
+
+#### Method class
+```ruby
+# The class of a method is the class of what it returns
+def meth1
+  [1, 2]
+end
+
+meth1.class == Array
+```
