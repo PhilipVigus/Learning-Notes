@@ -3,6 +3,7 @@
 # Version Control with git
 
 - [Setup after install](./git-setup.md)
+- [Aliases](./git-aliases.md)
 - [Staging](./git-staging.md)
 - [Committing](./git-committing.md)
 - [Undoing commits](./git-undoing-commits.md)
