@@ -2,7 +2,7 @@
 
 # Strings
 
-####Creating:
+#### Creating:
 ```ruby
 # all the same (broadly) - see later for why single quotes differ compared to double quotes
 str = String.new("this is a string")
