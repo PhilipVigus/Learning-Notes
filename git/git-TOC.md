@@ -12,3 +12,4 @@
 - [Branches](./git-branches.md)
 - [Rebasing](./git-rebasing.md)
 - [Cherry-picking](./git-cherry-picking.md)
+- [Remote repositories](./git-remote-repositories.md)
