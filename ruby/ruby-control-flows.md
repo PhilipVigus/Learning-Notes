@@ -21,6 +21,18 @@ else
   # do the last thing
 end
 
+# This works because if ... is a statement,
+# and every statement in Ruby returns a value
+# In this case, the returned value is assigned
+# to var
+var = if true
+            "true"
+          else
+            "false"
+          end
+             
+value == "true"
+
 # Ruby doesn't use the switch keyword...
 # note the indentation
 case a
