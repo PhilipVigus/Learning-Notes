@@ -15,6 +15,18 @@ loop do
   break if i < 0 
 end 
 
+# implicitly returns i
+def func
+  i = 0
+  loop do
+    break i if i == 10
+    i += 1
+  end
+end
+
+# prints 10
+puts func
+
 # Use iterators instead wherever possible
 for num in 1...10
 end
