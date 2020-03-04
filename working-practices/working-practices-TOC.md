@@ -3,3 +3,4 @@
 - [Exchanging feedback](./exchanging-feedback.md)
 - [Continuous integration](./continuous-integration.md)
 - [Debugging](./debugging.md)
+- [Pair programming](./pair-programming.md)
