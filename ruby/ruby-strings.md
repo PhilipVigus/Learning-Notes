@@ -17,7 +17,7 @@ long as it matches what you use at the start.
 }%
 
 # here-documents
-<<DELIM
+<<-DELIM
 Another way of specifying a multi-line string that
 keeps the
 formatting. delim can be any word or identifier as long as
