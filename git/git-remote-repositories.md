@@ -25,7 +25,7 @@ git remote show remote_name
 git remote rename old_name new_name
 
 # Delete a remote
-git remote delete remote_name
+git remote rm remote_name
 
 
 # Push your code from local version of the branch 
