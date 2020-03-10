@@ -26,6 +26,35 @@ Make sure you:
 - have fun
 - don't be bossy or intimidated
 
+#### Specific methodologies
+
+Ping-pong pairing:
+
+|                 | A | B |
+| ------------ | --- | --- |
+| Red | Write test, watch it fail | - |
+| Green | - | Make it work |
+| Refactor | - | Make it right |
+| Red | - | Write test, watch it fail |
+| Green | Make it work | - |
+| Refactor | Make it right | - |
+| ... | | |
+
+Make it work/change the message:
+
+|                 | A | B |
+| ------------ | --- | --- |
+| Red | Write test, watch it fail | - |
+| Red | - | Change the message |
+| Red | Change the message | - |
+| Red | - | Change the message |
+| Green | Make it work | - |
+| Refactor | Make it right | - |
+| Red | - | Write test, watch it fail |
+| Green | Make it work | - |
+| Refactor | Make it right | - |
+| ... | | |
+
 #### Tools for remote pairing
 
 - [ScreenHero (now built into Slack)](https://slack.com/intl/en-gb/video-conferencing?eu_nc=1)
