@@ -19,5 +19,5 @@
 * [Asserts](./ruby-asserts.md)
 * [Regular expressions](./ruby-regular-expressions.md)
 * [OOP](./ruby-oop.md)
-* [Modules](.ruby-modules.md)
+* [Modules](./ruby-modules.md)
 * [Gems](./ruby-gems.md)
