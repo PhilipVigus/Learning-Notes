@@ -21,3 +21,4 @@
 * [OOP](./ruby-oop.md)
 * [Modules](./ruby-modules.md)
 * [Gems](./ruby-gems.md)
+* [Rspec](./ruby-rspec.md)
