@@ -61,8 +61,8 @@
 
 - Goal - Become more comfortable with debugging
 	- Plan - Work through the Debugging Approaches practical
-	- Evidence - TODO
-	- Retrospective - TODO
+	- Evidence - Exercise completed with screencap videos
+	- Retrospective - The exercise definitely helped, and by the end I was much more comfortable with the process and taking my time to understand the code rather than plowing in and making semi-random changes
 - Goal - Practice TDD
 	- Plan	- Work through TDD exercises
 	- Evidence - TODO
