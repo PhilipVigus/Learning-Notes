@@ -73,3 +73,18 @@ Becomes:
 ## Feature tests
 
 A feature test is how your objects and messages are going to communicate in code. 
+
+## TDD itself
+
+Three rules
+
+- only ever write production code if it is to make a failing test pass
+- only write enough of a unit test to make the test fail
+- only write enough production code to make a single unit test pass
+
+The four phases of a unit test
+
+- Setup - sets up the system under test, eg by creating the relevant class, object etc
+- Exercise - execute the system under test
+- Verify - make sure the results of the test match your expectations
+- Teardown - reset the system to the pre-setup state

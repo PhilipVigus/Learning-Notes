@@ -65,5 +65,31 @@
 	- Retrospective - The exercise definitely helped, and by the end I was much more comfortable with the process and taking my time to understand the code rather than plowing in and making semi-random changes
 - Goal - Practice TDD
 	- Plan	- Work through TDD exercises
-	- Evidence - TODO
+	- Evidence - Still need to complete test driving 1
 	- Retrospective - TODO
+
+### Daily - Wednesday
+
+- Goal - Clarify outstanding issues from yesterday
+	- Plan - ask other students and/or Josh about
+		- process for branching when working with new pair partners
+		- clarify use of red-green-green in Boris Bikes challenge and whether to also swap roles after writing a test and making it fail
+		- what does the be_working RSpec method do?
+			
+			```ruby
+			it 'releases working bikes' do
+              bike = subject.release_bike
+              expect(bike).to be_working
+          end
+			```
+	- Evidence - will write up answers as/when I get them
+	- Retrospective - TODO
+- Goal - practice TDD
+	- Plan - complete the following exercises
+		- [test driving 1](https://github.com/makersacademy/skills-workshops/blob/master/practicals/test_driving.md)
+		- [birthdays TTD exercise] (https://github.com/makersacademy/birthdays) 
+	- Evidence - github repo for each completed exercise
+	- Retrospective - TODO
+- Stretch goals
+	- https://github.com/makersacademy/skills-workshops/tree/master/week-1/translating_user_stories_into_code
+	- https://github.com/makersacademy/skills-workshops/tree/master/week-1/oop_1
