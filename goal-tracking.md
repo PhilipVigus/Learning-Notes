@@ -89,7 +89,9 @@
 		- [test driving 1](https://github.com/makersacademy/skills-workshops/blob/master/practicals/test_driving.md)
 		- [birthdays TTD exercise] (https://github.com/makersacademy/birthdays) 
 	- Evidence - github repo for each completed exercise
-	- Retrospective - The test driving 1 exercise was relatively straightforward to complete. Following some misunderstandings when working through Boris Bikes with my pair partner yesterday, I took the opportunity to extend the code for this exercise and implement it as a full class. I found this much easier to do this time around, and am pleased that I seem to be understanding the concepts involved more.
+	- Retrospective 
+		- The test driving 1 exercise was relatively straightforward to complete. Following some misunderstandings when working through Boris Bikes with my pair partner yesterday, I took the opportunity to extend the code for this exercise and implement it as a full class. I found this much easier to do this time around, and am pleased that I seem to be understanding the concepts involved more.
+		- I started the birthdays exercise but was unable to finish it as the TTD workshop overran. The part I started seemed to go smoothly though, and I felt I understood the process of what I was doing a lot more 
 - Stretch goals
 	- https://github.com/makersacademy/skills-workshops/tree/master/week-1/translating_user_stories_into_code
 	- https://github.com/makersacademy/skills-workshops/tree/master/week-1/oop_1
