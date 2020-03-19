@@ -57,7 +57,7 @@
 
 - TODO
 
-### Daily - Tuesday
+### Daily - Wednesday
 
 - Goal - Become more comfortable with debugging
 	- Plan - Work through the Debugging Approaches practical
@@ -68,7 +68,7 @@
 	- Evidence - Still need to complete test driving 1
 	- Retrospective - TODO
 
-### Daily - Wednesday
+### Daily - Thursday
 
 - Goal - Clarify outstanding issues from yesterday
 	- Plan - ask other students and/or Josh about
@@ -89,7 +89,7 @@
 		- [test driving 1](https://github.com/makersacademy/skills-workshops/blob/master/practicals/test_driving.md)
 		- [birthdays TTD exercise] (https://github.com/makersacademy/birthdays) 
 	- Evidence - github repo for each completed exercise
-	- Retrospective - TODO
+	- Retrospective - The test driving 1 exercise was relatively straightforward to complete. Following some misunderstandings when working through Boris Bikes with my pair partner yesterday, I took the opportunity to extend the code for this exercise and implement it as a full class. I found this much easier to do this time around, and am pleased that I seem to be understanding the concepts involved more.
 - Stretch goals
 	- https://github.com/makersacademy/skills-workshops/tree/master/week-1/translating_user_stories_into_code
 	- https://github.com/makersacademy/skills-workshops/tree/master/week-1/oop_1
