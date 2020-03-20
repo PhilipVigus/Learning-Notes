@@ -6,6 +6,8 @@ BDD is closely related to TDD and relates acceptance or feature tests to unit te
 
 It is an iterative process, where you move from a user story to a feature test, then to unit tests and finally to the features that allow the code to pass the unit tests. You then start the cycle again with the next feature.
 
+BDD reduces over-engineering, keeying you focused on features that the users need to make the software do what it needs to and no more.
+
 ## User stories
 
 User stories are simple descriptions of a feature from the perspective of the person who wants it:
