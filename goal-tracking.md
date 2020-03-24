@@ -53,10 +53,6 @@
 - Work through the practicals relating to TTD
 - Revise OO principles from previous learning
 
-### Evidence
-
-- TODO
-
 ### Daily - Wednesday
 
 - Goal - Become more comfortable with debugging
@@ -103,10 +99,53 @@
 		- When and why would you use the shorthand form of it blocks given that they reduce the self-documenting nature of test code?
 		- How do you deal with mocking and the fact that separating units in testing means you have to maintain the mocks separately when you change a unit's public interface
 	- Evidence - write up in learning notes
-	- Retrospective - TODO
+	- Retrospective - I spoke to my coach and confirmed my understanding of both of these issues was sound, which was extremely encouraging. He agreed that you have to be careful about how you use the short-hand version of it blocks, and that in practice it comes down to a team decision as to which you use. He also confirmed that the issue with mocks and doubles exists and that it is handled by using integration tests to test the public interfaces between classes.
 - Goal - Continue to improve my familiarity with TDD
 	- Plan - complete the birthdays TTD exercise I started yesterday
 	- Evidence - the completed repo
-	- Retrospective - TODO
+	- Retrospective - I completed this, although failed my reading comprehension as I missed one of the stages and had to do it last, out of order. I am very happy with the work I eventually produced though and feel I now have a much better understanding of TDD and how to practice it than I did at the beginning of the week.
 - Goal - Look at basic OOP principles
 	- Plan - work through [this](https://github.com/makersacademy/skills-workshops/tree/master/week-1/oop_1) general introduction and then [this](https://github.com/makersacademy/skills-workshops/blob/master/practicals/object_oriented_design/encapsulation.md) exercise on encapsulation
+	- Evidence - I was unable to complete this exercise as I ran out of time
+
+	# Week 2
+	
+	## Overall
+- Goal - Use all of week 1's skills (don't underestimate the importance of this)
+	- Evidence
+	- Retrospective 
+- Goal - Break one class into two classes that work together, while maintaining test coverage
+ 	- Evidence
+	- Retrospective- Goal - Unit test classes in isolation using mocking
+- Goal - Explain some basic OO principles and tie them to high level concerns (e.g. ease of change)
+	- Evidence
+	- Retrospective
+- Goal - Review another person's code and give them meaningful feedback
+	- Evidence
+	- Retrospective
+- Goal - Be okay with not completing all of the end of week challenge
+ 	- Evidence
+	- Retrospective
+- Goal - Work goal-tracking into the regular hours
+	- Evidence
+	- Retrospective
+- Goal - Complete a blog entry for the week
+
+### Monday
+
+- Goal - Practice code review for the first time
+	- Evidence - It went okay, although my pair was unable to find much in my code to suggest changes for. My next step with this will be to ask a coach to review my code for me.
+- Goal - Consolidate week 1 skills
+	- Evidence - Pairing today went extremely well. After a slow start we made fast and effective progress, and both of our understanding of the material increased a great deal. Its also important to note that this is the third time I've received feedback stating that it was the best pairing session the other person had had so far, which is excellent evidence that I'm doing something right with the pairing aspect of things.
+
+		I also spoke to my coach about my progress so far, and he recommended concentrating on a more challenging project in my self-directed time this week. It seems I was correct in thinking I need to be stretched a little more, and this is how he wants me to do it.
+- Goal - Work out where to fit in goal tracking.
+	- Evidence - I've thought about this, and the best approach I have is to update the goals as I go through the day, filling in evidence as and when I make progress. I'm going to try this for the rest of the week and see how it works. 
+
+### Tuesday
+
+- Goal - Start working on the Gilded Rose project as suggested by my coack
+	- Evidence - I will track my progress with this as part of the README for the project
+- Goal - Complete my goal-tracking before 6pm today so there is none left over for tomorrow morning
+- Goal - Brainstorm some blog ideas
+- Goal - Look at OO principles
