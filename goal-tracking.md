@@ -145,7 +145,25 @@
 ### Tuesday
 
 - Goal - Start working on the Gilded Rose project as suggested by my coack
-	- Evidence - I will track my progress with this as part of the README for the project
+	- Evidence - Started a little bit of work on this
 - Goal - Complete my goal-tracking before 6pm today so there is none left over for tomorrow morning
+	- Unable to complete 
 - Goal - Brainstorm some blog ideas
+	- Unable to complete 
 - Goal - Look at OO principles
+	- Evidence - I wrote up an overview of a number of OO concepts - encapsulation, abstraction, dependency injection, coupling and cohesion
+
+	Overall, I had a lot less time today than I anticipated due to morning workshop overrunning
+	
+### Wednesday
+
+- Goal - Continue working on the Gilded Rose project as suggested by my coack
+	- Evidence - Readme write up and code
+- Goal - Complete my goal-tracking before 6pm today so there is none left over for tomorrow morning
+	- Evidence - Completing the goal tracking
+- Goal - Brainstorm some blog ideas
+	- List
+- Goal - Look at OO principles (polymorphism, inheritance and composition
+	- Evidence - In notes
+- Goal - Attend process workshop
+	- Evidence - Attending 
