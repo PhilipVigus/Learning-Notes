@@ -126,3 +126,62 @@ Both BDD and TDD follow the same general pattern:
 - Make the test pass (Green)
 - Refactor if necessary (Green)
 
+## Doubles, mocks and stubs
+
+A double is a simplified object that takes the place of another in a test. It can have fake methods called stubbs added, which tell the double how to respond to method calls. Stubs can also be added to real objects to override/guarantee responses to method calls. They can:
+
+- Act as a placeholder for an object that doesn't exist
+- Replace random behaviour with predictable for the purpose of testing
+- Simplify the set-up phase of a test
+- Ensure tests are fast by avoiding having to use code that is slow and complex
+
+A mock is a stub with a built-in expection to be satisfied during the test.
+
+A complete example:
+
+```ruby
+context '#buy' do
+  let(:user) { User.create }
+  let(:book) { double('fake book') }	# A simple double
+
+  context 'when book is digital' do
+    before do
+      # Adding a stub to the double
+      allow(book).to receive(:ebook?).and_return(true)
+    end
+
+    it 'does not call decrease_count_on_hand' do
+      
+      # This is a mock, as you set an expectation 
+      # that decrease_count_on_hand will not be called
+      expect(book).not_to receive(:decrease_count_on_hand)
+
+      user.buy(book, 1)
+    end
+  end
+
+  context 'when book is not digital' do
+    before do
+      allow(book).to receive(:ebook?).and_return(false)
+    end
+
+    it 'calls decrease_count_on_hand' do
+    
+      # This is also a mock, as you set an expection
+      # that decrease_count_on hand will be called with
+      # with a specific argument and return a specific value
+      expect(book).to receive(:decrease_count_on_hand).with(1).and_return(true)
+
+      user.buy(book, 1)
+    end
+  end
+end
+```
+
+
+
+
+You have to be extremely careful using these techniques. They can lead to the following situations:
+
+- You have a stubbed double that represents an object that doesn't exist yet the associated tests that use it pass. This can lead to a false sense of security about the confidence you have in your code.
+- You have an isolated units test that utilises doubling to remove a dependency on another class. When the public interface to that class changes, the test will still work because the doubles haven't changed. However, a feature test using the two classes together would fail. This is why you should ensure you have integration/feature tests.
