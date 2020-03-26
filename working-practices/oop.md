@@ -101,6 +101,12 @@ You can also inject actual classes in rather than class instances. This allows y
 
 ## Polymorphism
 
+Polymorphism is the ability represent the same interface for different underlying forms. You might have a square, circle and triangle class. They each have an area method that calculates their area, and inherit from a generic shape class. A class that uses these can assume everything is a shape, and call area on each shape it deals with. Polymorphism allows the correct area method to be called for each sub-class.
+
 ## Extracting classes
 
 ## Inheritence and composition
+
+Inheritence defines an is-a relationship between two classes. A dog is-a animal. A car is-a vehicle. It is useful when all of the child classes share common functionality with their parent, and can be employed to implement polymorphism. Subclasses are able to override methods/functionality of their superclass as necessary.
+
+Composition defines a has-a relationship where one class is made up of a number of sub-classes that collectively provide a portion of the main class's functionality. For example, a human class might have an eats, drinks, speaks and see class. These subclasses can then be shared as needed with other classes that require that functionality. A robot might speak but doesn't need the others. A camera might see but doesn't need the others. In some cases this makes composition a lot more flexible when a particular set of classes share functionality but do not fit into a hierarchical, is-a set of relationships.

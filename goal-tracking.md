@@ -37,6 +37,12 @@
 	- Write code that's easy to change
 	- Justify the way I work
 	- Grow collaboratively
+- Succeed with Process Workshops
+	- Ask a coach to help me with a walk through of the problems I'm having
+	- Get a list of good katas I can practice by myself with
+	- Practice, recording my process and ask a coach to revew the video
+	- Practice with a live partner, asking them to observe take notes and feed back
+	- Go to more process workshops to use and reinforce what I have learned
 
 # Week 1
 
@@ -157,13 +163,26 @@
 	
 ### Wednesday
 
-- Goal - Continue working on the Gilded Rose project as suggested by my coack
-	- Evidence - Readme write up and code
+- Goal - Continue working on the Gilded Rose project as suggested by my coach
+	- Evidence - Made quite a lot of progress with this today. The code is looking a lot cleaner, and I've managed to refactor much of it into separate methods
 - Goal - Complete my goal-tracking before 6pm today so there is none left over for tomorrow morning
 	- Evidence - Completing the goal tracking
 - Goal - Brainstorm some blog ideas
-	- List
+	- Evidence - This didn't get done
 - Goal - Look at OO principles (polymorphism, inheritance and composition
-	- Evidence - In notes
+	- Evidence - This didn't get done
 - Goal - Attend process workshop
-	- Evidence - Attending 
+	- Evidence - I attended, but really struggled. Initially there were technical problems with my first partner, so we had to give up. I eventually paired with someone else, but we didn't have much time. When I started, I went completely off the rails and my brain froze. I got into a deadend and didn't know how to get out. I got discouraged, anxious and eventually had to stop. I don't know how to get past the block, and will ask to work through a problem with a coach tomorrow.
+
+### Thursday
+
+- Goal - work through one of the process workshop questions with a coach
+	- Evidence
+- Goal - brainstorm some blog ideas
+	- Evidence
+- Goal - OO principles
+	- Evidence
+- Goal - Gilded rose
+	- Evidence
+- Goal - Think about my approach to pairing and the way I set myself up mentally beforehand
+	- Evidence
