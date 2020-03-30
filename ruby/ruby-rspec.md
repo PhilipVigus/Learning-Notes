@@ -48,3 +48,40 @@ describe ClassBeingTested do
   end
 end
 ```
+
+## Predicate matchers
+
+This works for any predicate method (returns true/false and ends in a question mark). be_method_name without the question mark exercises the method and uses its return value.
+
+```ruby
+class SomeClass
+	def happy?
+		true
+	end
+end
+
+it 'is happy' do
+	expect(subject).to be_happy
+end
+```
+
+## Method chaining
+
+Method chaining is an elegent way of specifying a nested stub call without having to create doubles within doubles within doubles etc...
+
+It's particularly useful when you are passing in a class into a method as part of dependency injection, and need to stub the call to the classes new method and also a method on what is returned by the new call.
+
+```ruby
+class SomeClass
+	def use_another_class(class_to_use)
+		instance = class_to_use.new
+		instance.some_method 
+	end
+end
+
+it 'prevents convoluted doubles and stubs' do
+	another_class_double = double(:another_class)
+	allow(another_class_double).to receive_message_chain(:new, :some_method)
+end
+```
+
