@@ -69,6 +69,15 @@ GET / HTTP/1.1
 4xx - you (client) messed up
 5xx - I (server) messed up
 
+#### Methods
+
+HEAD - like get except the server is only asked to return the response header, with no resource(body). It's useful if you want to check a resource's characteristics without needing the resource itself, and it saves bandwidth.
+
+POST - send data to a server
+* Contains a block of data in the body that's sent to the server and a few extra headers to describe the body
+* The request URI usually points to a program to handle the data being sent
+* The HTTP response is normally program output rather than a static file
+
 #### Chrome console
 
 The network tab shows you all requests and responses made, and you can click on a particular response to get further information.
