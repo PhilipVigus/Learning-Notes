@@ -202,11 +202,22 @@
 - Goal - Build a simple web app
 - Goal - Follow an effective debugging process for web applications
 - Goal - Explain the basics of how the web works (e.g. request/response, HTTP, HTML, CSS)
-- Goal - Explain the MVC pattern	
+- Goal - Explain the MVC pattern
+- Goal - Get one of the coaches to review my takeway challenge code
+- Goal - Continue building confidence with process workshops
+	- 
 
 ### Monday
 
 - Goal - Build a simple web app
 	- Evidence - work through https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/servers.md
 	- Evidence - work through https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/clients.md
+		- Both of the above completed and working well
 	- Evidence - write up a blog article explaining what you've learned
+		- Not done. I had some meetings that overran, and attended a workshop instead
+
+### Tuesday
+
+- Goal - Review Josh's feedback on process recording and update process accordingly
+- Goal - Write a blog
+- Goal - https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/http_servers.md
