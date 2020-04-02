@@ -235,4 +235,13 @@
 ### Thursday
 
 - Goal - Finish writing blog
+	- Complete. I'm reasonably happy with the result, but may go back to edit it at some point in the future
 - Goal - Read through the HTTP explainer article https://dev.opera.com/articles/http-basic-introduction/ and DNS stuff
+	- Evidence - both read through, and there's nothing in either that I hadn't already covered elsewhere 
+
+### Friday
+
+- Goal - Do a recorded process workshop
+- Goal - Write up understanding of MVC
+- Goal - Work through https://github.com/makersacademy/skills-workshops/tree/master/week-3/dissecting-rack-middleware
+- Goal - If I have time, organise my online notes a little better
