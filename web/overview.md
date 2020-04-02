@@ -11,6 +11,8 @@ Defined sets of rules about how things work/interact. There are multiple layers 
 * Internet - IP(v4 and v6)
 * Link Layer - Ethernet, WiFi
 
+Communication protocols specify the syntax, semantics and timing issues within their particular domain
+
 ### Internet Protocol
 
 This protocol defines how connections work between networked hosts. It splits requests and response into multiple packets, but makes no guarantees that an individual packet will arrive (that's what TCP does, which sits on top of IP)
@@ -49,7 +51,7 @@ host -t a google.com
 
 ### HTTP
 
-Defines the format for how documents are served over the internet
+Is an application protocol that sits above the communication protocol (TCP/IP). It defines the format for how documents are served over the internet
 
 #### Request
 
@@ -58,7 +60,22 @@ Defines the format for how documents are served over the internet
 telnet google.co.uk 80
 
 # then this followed by two line returns
+# GET - the verb or method
+# / - The path to the information we want
+# HTTP/1.1 - The flavour(version) of the language we're speaking
 GET / HTTP/1.1
+```
+#### Response
+
+```bash
+HTTP/1.1 200 OK
+Date: date_info
+Sever: server_info
+Content-Type: content_info
+Set-Cookie: cookie info
+...
+etc
+
 ```
 
 #### Status codes

@@ -204,8 +204,9 @@
 - Goal - Explain the basics of how the web works (e.g. request/response, HTTP, HTML, CSS)
 - Goal - Explain the MVC pattern
 - Goal - Get one of the coaches to review my takeway challenge code
+	- Good feedback received. Confirmed general approach was sound but highlighted some areas where I can definitely improve
 - Goal - Continue building confidence with process workshops
-	- 
+	- Got some great feedback from coach, and am a bit more confident than I was
 
 ### Monday
 
@@ -219,5 +220,19 @@
 ### Tuesday
 
 - Goal - Review Josh's feedback on process recording and update process accordingly
+	- done. Also watched replay of his demonstration from last night. Learned some really useful things, particularly the idea of only increasing one problem 'dimension' at a time.
 - Goal - Write a blog
+	- not done
 - Goal - https://github.com/makersacademy/skills-workshops/blob/master/practicals/servers_and_clients/http_servers.md
+	- Completed, all fine and I understand the code involved
+
+### Wednesday
+
+- Goal - Consolidate understanding of capybara and rspec by working through https://github.com/makersacademy/course/blob/master/intro_to_the_web/post_challenges/birthday_app.md
+	- done. It was a really useful exercise that helped me understand the steps required to get a basic app up and running. We also ended up covering the same material again in the afternoon's pairing session, so everything was doubly reinforced
+
+	
+### Thursday
+
+- Goal - Finish writing blog
+- Goal - Read through the HTTP explainer article https://dev.opera.com/articles/http-basic-introduction/ and DNS stuff
