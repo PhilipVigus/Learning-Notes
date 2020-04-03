@@ -241,7 +241,8 @@
 
 ### Friday
 
-- Goal - Do a recorded process workshop
+- Goal - Do a recorded process workshop (https://github.com/makersacademy/skills-workshops/tree/master/process_review/exercises/scrabble_solver)
+	- Completed. It went quite well, although it took a long time and I went down the wrong route with one of the tests. I'll be interested to get feedback on a couple of points where I made a bit of a leap in the complexity. This is particularly the case when moving from testing for 'a' to 'f' and then other letters. I feel I possibly could have had an intermediate step in there somewhere.
 - Goal - Write up understanding of MVC
 - Goal - Work through https://github.com/makersacademy/skills-workshops/tree/master/week-3/dissecting-rack-middleware
 - Goal - If I have time, organise my online notes a little better

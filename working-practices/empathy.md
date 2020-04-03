@@ -28,9 +28,9 @@ Pyramid with trust at the bottom. An absence of trust leads to fear of conflict,
 * fear of conflict
 * absence of trust
 
-Empaty builds trust
+Empathy builds trust
 
-Three types of empathy
+## Three types of empathy
 
 * affective
 	* not being driven to help
@@ -39,7 +39,7 @@ Three types of empathy
 * cognitive
 	* consciously imagine what someone is feeling but it is not internalised (eg doctors)
 
-Why can empathy be missing?
+## Why can empathy be missing?
 
 * Anger - towards the person or situation
 * Protection - self-protection from 'catching' the emotion
@@ -47,7 +47,7 @@ Why can empathy be missing?
 * Fear of intimacy - easier than the risk of vulnerability and closeness
 * Not being in the right headspace - already being overwhelmed etc
 
-Training empathy
+## Training empathy
 
 * "Just like me"
 	* Higher in empathy towards someone you have things in common with
