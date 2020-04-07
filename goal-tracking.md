@@ -246,3 +246,32 @@
 - Goal - Write up understanding of MVC
 - Goal - Work through https://github.com/makersacademy/skills-workshops/tree/master/week-3/dissecting-rack-middleware
 - Goal - If I have time, organise my online notes a little better
+
+# Week 4
+
+## Overall
+
+* Build a simple web app with a database
+* Follow an effective debugging process for database applications
+* Explain the basics of how databases work (e.g. tables, SQL, basic relationships)
+
+### Monday
+
+- Goal - Start looking at SQL
+	- Evidence - Began SQL Zoo. Progressed well barring issue with getting the round() function to work
+- Goal - Discuss weekend challenge with coack
+	- Evidence - Had a really interesting conversation regarding issues that I had had with the design and implementation of the project. This made things much clearer in my mind, and highlighted that there are often multiple ways of doing things and not necessarily one, simple answer
+
+
+### Tuesday
+
+- Goal - Discuss options for weekend challenges with coach and peer group
+	- discussed with peers
+- Goal - Ask peers about round() function
+	- no-one else had done it 
+- Goal - Consolidate learning from previous day's pairing session
+	- combined with daily diary app. Worked really well 
+- Goal - Look at REST
+- Goal - start working on the daily diary app
+
+
