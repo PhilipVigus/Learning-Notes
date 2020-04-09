@@ -119,3 +119,47 @@ One slack channel has many memberships
 ### Exercise - Basic Twitter ERD
 
 ![Twitter ERD](./twitter-erd.png)
+
+## CRC Cards for domain modelling
+
+Class responsibility collaborator cards
+
+### What is a CRC card?
+
+| Class name | |
+| ---------- | ----------- |
+| Responsibility | Collaborators |
+| What it does? | What it collaborates with to fulfil those responsibilities |
+
+
+Docking station
+
+| Resp | Collab |
+| --------- | -------- |
+| Release bike | bike |
+| Dock bike | |
+| Number of bikes | |
+
+
+Bike
+
+| Resp | Collab |
+| --------- | -------- |
+| knows if it's good | |
+
+### Turn into database model
+
+Tables
+
+| Bike | |
+| ---- | ---- |
+| id | int |
+| is_good | true/false |
+| docking_station_id | int |
+
+| Docking Station | |
+| ---- | ----- |
+| id | int |
+
+Docking station has many bikes = 1-to-many relationship
+Getting the number of bikes at a docking station = search bikes for docking_station_id

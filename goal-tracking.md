@@ -274,4 +274,26 @@
 - Goal - Look at REST
 - Goal - start working on the daily diary app
 
+### Wednesday
 
+- Goal - Review rubric for RPS challenge
+	- Evidence - reviewed. There were some interesting approaches to working with the game rules that I'll take forward to future challenges
+- Goal - Look at REST
+	- Evidence - not done
+- Goal - Continue with daily diary app
+	- Evidence - Set up Rake to automate database setup and test database cleaning between tests. Corrected code to use correct databases
+
+### Thursday
+
+- Goal - Look at one-to-many and many-to-many SQL database table relationships
+	- Evidence - looked at this, and understand one-to-many. Didn't get that far with many-to-many, and will review again tomorrow
+- Goal - Look at REST
+	- Evidence - I have a better understanding of this now 
+- Goal - Get feedback on last process workshop (middle letter)
+	- Evidence - not done
+
+### Friday
+
+- Goal - Review many-to-many relationships in databases
+- Goal - Start work on the weekend challenge
+	- Evidence 
