@@ -8,9 +8,10 @@ This is a collection of  notes, observations and reminders from the various diff
  - [Markdown](./markdown/markdown.md)
  - [git](./git/git-TOC.md)
  - [GitHub](./github/github-TOC.md)
- - Javascript
+ - [Javascript](./javascript.md)
 - [Ruby](./ruby/ruby-TOC.md)
 - [Web](./web/web-TOC.md)
+- [Learning a language](./learning-a-new-language.md)
 
 Makers Academy progress
 
