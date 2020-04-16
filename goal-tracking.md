@@ -252,8 +252,11 @@
 ## Overall
 
 * Build a simple web app with a database
+	* Over the course of the week, including the weekend challenge, I built three web apps. I now feel comfortable with the design philosphy for building apps that interface with SQL databases, which I'm very pleased with. All three apps do what they are intended to do as far as the user stories I completed are concerned. The chitter challenge is not complete, and I may come back to finish it at some point in the future.
 * Follow an effective debugging process for database applications
+	* I am very happy with how my debugging process is working generally. I've moved from being anxious whenever a bug occurs to being able to systematically debug an application, including those using databases. There were several occasions during the chitter challenge in particular where I had some very subtle bugs, and I was very pleased that I was able to fix them 
 * Explain the basics of how databases work (e.g. tables, SQL, basic relationships)
+	* I am broadly happy with this, and enjoyed learning SQL. However, the one area of weakness that still needs work is many-to-many relationships. I did not get as far as the user story that utilises these in the chitter challenge, and will need to come back to improve my understanding of this area in the future. 
 
 ### Monday
 
@@ -272,7 +275,9 @@
 - Goal - Consolidate learning from previous day's pairing session
 	- combined with daily diary app. Worked really well 
 - Goal - Look at REST
+	- not done
 - Goal - start working on the daily diary app
+	- not done
 
 ### Wednesday
 
@@ -295,5 +300,111 @@
 ### Friday
 
 - Goal - Review many-to-many relationships in databases
+	- Evidence - reviewed in theory, but have not had the chance to use them in practice 
 - Goal - Start work on the weekend challenge
-	- Evidence 
+	- Evidence - I made really good progress here, focusing on Rake tasks and user authentication. I'm really pleased with the code base I ended up with.
+
+## Week 1 - 4 Review
+
+Week 1/2
+
+* Test-drive a simple program using objects and methods
+* Pair using the driver-navigator style
+* Follow an effective debugging process
+* Describe some basic OO principles like encapsulation, SRP
+* Use all of week 1's skills (don't underestimate the importance of this)
+* Break one class into two classes that work together, while maintaining test coverage
+* Unit test classes in isolation using mocking
+* Explain some basic OO principles and tie them to high level concerns (e.g. ease of change)
+* Review another person's code and give them meaningful feedback
+
+I am confident I can now comfortably meet all of the learning objectives for these weeks. The work in later weeks has very effectively reinforced my learning and understanding of all of the items on the list.
+
+Week 3
+
+* Build a simple web app
+* Follow an effective debugging process for web applications
+* Explain the basics of how the web works (e.g. request/response, HTTP, HTML, CSS)
+* Explain the MVC pattern
+
+With the knowledge I had before the course combined with that I gained during this week, I feel I meet all learning objectives here and have no concerns.
+
+Week 4
+
+* Build a simple web app with a database
+* Follow an effective debugging process for database applications
+* Explain the basics of how databases work (e.g. tables, SQL, basic relationships)
+
+The learning objectives for this week are a little less secure. I feel comfortable explaining the basics of databases, but feel I need further practice building web apps that utilise them, particularly with many-to-many relationships.
+
+Course
+
+- Gain self-belief that I can do this
+	- I'm getting there. I had a huge knock to my self-confidence at the end of this week that is going to be challenging to overcome, and it still feels that when I do gain self-belief that it is very brittle and lacks foundation. However, there are ongoing improvements here and I am undoubtedly stronger that I was at the start of the course
+- Gain skills required to be a software engineer
+	- Build anything
+	- Help my team succeed
+	- Be able to continue learning and growing after the course completes
+- Enjoy myself
+- Make software
+	- TDD anything
+		- My understanding of TDD is growing all the time. I can now effectively utilise it for simpler scenarios, but am aware it can go missing a little with with extended work such as the weekend challenges. I need to make sure I focus on this for the next weekend challenge.
+	- Program fluently
+		-  My programming is continuing to improve, and broadly speaking my technical skills are strong and getting stronger
+	- Debug anything
+		-  I am far more comfortable debugging in general than I was at the beginning of the course, and feel this is one of the areas I have improved in the most.
+	- Model anything
+		- I have thoroughly enjoyed learning the modelling processes we have learned so far, and feel my understanding in these areas is strong 
+	- Refactor anything
+		- Refactoring is an aspect of programming I enjoy more than most. I love the challenge of doing it in a way that doesn't break existing code.
+	- Have a methodical approach to solving problems
+		- This is improving alongside my understanding and use of TDD in particular. It still needs work for longer challenges, and I would expect it to get exercised on an ongoing basis as the course continues
+- Be equipped for long term growth
+	- Manage my own wellbeing
+		- This area is weak for me, as I knew it would be at the start of the course. The discussions I've had with coaches, and the suggestions they've given me to help strengthen this area have helped a lot though, and I have far more tools than I used to to deal with this. The largest challenge I have is with switching off at the weekends and spending a sensible about of time on the weekend challenges. This is something I am monitoring on an ongoing basis, and will focus on for the remainder of the course. 
+	- Learn anything for myself
+		- This one is difficult to judge. The majority of the technical skills so far have been things I have had at least and basic understanding of and coming from a teaching background, I already had a good understanding of how I prefer to learn. 
+- Help my teams succeed
+	- Use agile product development
+		- An ongoing learning process I don't feel I am able to judge yet
+	- Write code that's easy to change
+		- I'm generally happy with the quality of the code I've produced so far given the stage of the course I'm at 
+	- Justify the way I work
+		- The concern I have with being overly-bullish about my working practices helped me to grow significantly and I now feel I am much better equipped to discuss and justify my working practices in a way that helps me and those around me grow
+	- Grow collaboratively
+		- I still have difficulty comparing myself to others, although this is improving all of the time. With my background in IT, there is still a residual belief that I should be 'the best' in the group, even though on a logical basis I know this is unhelpful and not true at all. 
+- Succeed with Process Workshops
+	- Get a list of good katas I can practice by myself with
+		- https://kata-log.rocks/bowling-game-kata	- Practice, recording my process and ask a coach to revew the video
+		- done several times
+	- Practice with a live partner, asking them to observe take notes and feed back
+	- Go to more process workshops to use and reinforce what I have learned
+	- I continue to work on my process, and my fear of the workshops has largely been removed
+
+## Week 5
+
+* Test drive a simple front-end web app with Javascript
+* Follow an effective process for learning a new language
+
+### Tuesday
+
+* Ask a coach to review my chitter code
+	* Coach asked - not sure what form feedback is going to take? 
+* Look at ajax request/response cycle
+	* Not done
+
+### Wednesday
+
+* Process workshop
+	* Took part. Went okay with a new challenge. I forgot to record it though!
+* Continue doing Airport in JS
+	* Made good progress with this. Am a lot more confident with the basics of JS and Jasmine. I still need to practice spys to get my head around them though
+* Cement understanding of prototypes
+	* Confirmed understandng was sound by talking it through with coach
+
+### Thursday
+
+* Get a coach to review my process workshop video
+	* Not possible - I completely forgot to record the workshop - doh!
+* Finish playing with the airport JS (make sure to have a go at spies)
+	* Ran out of time and was unable to do this 
