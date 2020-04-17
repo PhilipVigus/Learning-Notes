@@ -407,4 +407,29 @@ Course
 * Get a coach to review my process workshop video
 	* Not possible - I completely forgot to record the workshop - doh!
 * Finish playing with the airport JS (make sure to have a go at spies)
-	* Ran out of time and was unable to do this 
+	* I've played with this to the extent that I think I've got everything out of it that I'm going to, even though it's not a 'completed' project. Time to move on to something else
+
+### Friday
+
+* Begin implementing Chitter in JS with React and Express
+	* Started working properly on this today. Making progress at a decent rate, got the basics set up for the server and client side. Now working on the component side of things, and need to work out how to do iteration to produce lists of components 
+* Look at doing process workshops in Javascript rather than Ruby
+	* I went through the 10 minute walk task with both Node and the standalone Jasmine setup. Both were okay, but I came to the conclusion that for simplicity, the standalone was far easier to set up as it didn't require node modules, npm etc 
+
+
+### End of week retro
+
+This was a strong week for me technically. My experience with JS prior to the course helped a great deal, and meant I was able to focus on other things. Starting to look at React has been really interesting, and it's clear how much I have to learn before I can really do anything sensible. Unit testing the individual components is particularly challenging, as it involves needing to understand concepts to even start working out what exactly it is you need to test against.
+
+On a more personal level I've struggled though and I'm not sure why. I still need to do some work to understand what is going on.
+
+## Week 6
+
+* Break down projects into tasks and allocate them to pairs
+* Build to a specificiation (rather than challenges)
+* Run stand-ups and retrospectives
+* Use a branch/PR/merge git workflow
+* Give and receive meaningful code review
+* Attempt doing to process workshop with Javascript
+* Continue working on React
+* Get feedback on bowling challenge
