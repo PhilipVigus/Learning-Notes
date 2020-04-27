@@ -425,11 +425,27 @@ On a more personal level I've struggled though and I'm not sure why. I still nee
 
 ## Week 6
 
+Goals
+
 * Break down projects into tasks and allocate them to pairs
+	* This did not go as smoothly as it might have. The group as a whole did not have a clear understanding of scrum and as a result, our ability to effectively break down the epics into tasks was not strong. By the end of the week though, my personal understanding was significantly stronger, and I now feel understand the overall process of breaking projects into epics into user stories into tasks.
 * Build to a specificiation (rather than challenges)
+	* This weant quite smoothly, and was one aspect of the week that went well. I already had a clear idea of how this part of agile working is supposed to work, which was confirmed by the group work we did
 * Run stand-ups and retrospectives
+	* Our stand ups varied in effecacy. We tried to blend personal goals into the standup, which was partially successful but took the focus away from the actual, formal standup process. The standup I ran as leader on the last day was effective though, and much more focused because we had been told we were presenting to the cohort at the end of the day with no notice at all. 
 * Use a branch/PR/merge git workflow
+	* This aspect is something I feel the week really helped with for me. By the end of the week I felt I completely understood this workflow and was able to use it efficiently and effectively 
 * Give and receive meaningful code review
-* Attempt doing to process workshop with Javascript
-* Continue working on React
-* Get feedback on bowling challenge
+	* Because of the way the group chose to work, I had limited opportunities to carry out code reviews, and the one I did do was as part of a group. However, this is something I've had practice with before, and I am comfortable with it as a process
+
+Overall I feel the week went well. I received really positive feedback about my leadership on the last day, which had been difficult due to decisions we had to make to get a product we could demonstrate to the rest of the cohort. I feel I still need practice working with shorter sprints, and hope that the next group project allows me to do this.
+
+## Week 7
+
+Goals
+
+* Do a process workshop in Javascript
+* Build relationships with my two mentees
+* Build a front-end app in Javascript
+* Work competently in Javascript 
+* Reason about asynchronous behaviour in Javascript
