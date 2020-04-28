@@ -479,3 +479,84 @@ var callback = function() {
 }
 setTimeout(callback, 2000)
 ```
+
+## Module pattern
+
+### ES6 Modules
+
+#### .js vs .mjs
+
+Various sources suggest using the .mjs extension for files containing modules. This is because they are treated significantly differently compared to 'normal' javascript. However, this can cause issues with certain browsers that aren't set up to correctly handle the different file extension.
+
+#### Exporting
+
+You can export any top-level item, such as a class, function, constant or variable. To do so, just place the export keyword in front of them:
+
+```javascript
+export const name = "Phil";
+
+export function add(a, b) {
+  return a + b;
+}
+# Rather than adding individual export keywords as above
+# you can do it with a summary line at the end of a file:
+export { name, add };
+```
+Default exports:
+
+```javascript
+# at the end of the file
+export default add;
+
+# on the function itself (note the function is now anonymous)
+export default function(a, b) {
+  return a + b;
+}
+```
+
+#### Importing
+
+```javascript
+# note that file extension is essential
+import { name, add } from "./file/location.js";
+```
+Default imports:
+
+```
+import add from "./file/location.js";
+```
+Avoiding namespace clashes by renaming an import:
+
+```
+import { add as newAdd } from "./file/location.js";
+```
+Importing everything into a module object:
+
+```javascript
+# Module can be any variable name you want
+import * as Module from "./file/location.js";
+
+# Then
+Module.add(1, 2);
+Module.name;
+```
+Dynamic module loading:
+
+```javascript
+# Use 'import' as a function in a script
+import("./module/location.js")
+  .then( (module) => { // do something with the module } );
+```
+
+#### Applying a module to an HTML file
+
+```html
+<script type="module" src="./file/location.js"></script>
+```
+
+#### Things to watch out for
+
+* trying to load an HTML file locally that imports a script will fail due to CORS security restrictions. You need to serve the file from a server
+* modules use strict mode automatically, so you don't need to declare it
+* modules are automatically deferred when loading into html
+* modules are imported into the local scope of the script you import into, NOT globally
