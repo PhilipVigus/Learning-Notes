@@ -560,3 +560,131 @@ import("./module/location.js")
 * modules use strict mode automatically, so you don't need to declare it
 * modules are automatically deferred when loading into html
 * modules are imported into the local scope of the script you import into, NOT globally
+
+### Modules using IIFEs (immediately invokable function expressions)
+
+An IIFE looks like this:
+
+```javascript
+(function() {
+	console.log("Hello there");
+})();
+
+# You have an anonymous function
+function() { console.log("Hello there"); }
+
+# wrapped in brackets so that the interpretter sees what comes next as a function expression and not a function
+(function() { console.log("Hello there"); })
+
+# and finished off with double braces so that it gets evaluated immediately
+(function() { console.log("Hello there"); })();
+```
+They can be used for various things, including hiding variable and functions that you want to be private.
+
+#### An example module using an IIFE
+
+```javascript
+((exports) => { 
+  let count = 0;
+  
+  function printTimesCalled() {
+    count += 1;
+    console.log(`I've been called ${count} times`);
+  }
+  
+  exports.printTimesCalled = printTimesCalled;
+} )(this);
+```
+Within a browser, this typically points to the global window object. It's passed into the IIFE, which adds printTimesCalled as a function on it. When you import the script in a script tag, it will immediately get executed, adding the printTimesCalled function to the global context and making it available.
+
+## The event loop
+
+JS runtime (eg V8 in chrome)
+
+- callstack
+- heap
+
+WebAPIs sit outside of that, and are provided by the browser
+
+- DOM
+- ajax
+- setTimeout
+- etc
+
+Callback queue
+
+### Call stack
+
+* JS is single threaded, has a single call stack and can do one thing at a time
+* It records where in the program you are. If you step into a function it pushes it onto the stack, if you leave a function it pops it from the stack
+* The stack trace is the state of the stack when an error happens
+
+### Blocking
+
+Code that is slow blocks when it is on the stack, as it's the only thing JS can run at that time
+This is a problem for browsers, as it blocks user input and interaction, rendering etc
+
+### Async callbacks
+
+One solution
+A function that is queued until a specified set of conditions are met then is called
+eg. setTimeout
+
+### Concurrency and the event loop
+
+* Relies on more than just the JS runtime, ie the browser APIs
+* The browser APIs provide the concurrency that the JS runtime cannot because of its lack of multithreading
+* As an example, the browser handles setTimeout, keeping track of when to add the callback function specified in setTimeout to the task queue
+* The webapis have to add stuff to thet task queue rather than straight onto the stack to prevent really weird interactions and corruption of the stack
+
+* The event loop
+	* Looks at the stack and the task queue
+	* If the stack is empty it takes the first thing from the task queue and pushes it onto the stack (which effectively runs it)
+* That last bit is really really important. The event loop will only ever move something from the task queue to the call stack if the call stack is empty
+
+#### Ajax request example
+* Ajax lives in an webapi
+* When an ajax request is made, it is spun off into the webapi that handles it
+* The webapi makes the request (concurrently)
+* When the request is complete, the webapi moves the callback specified as part of the request onto the task queue
+* This is then pushed onto the stack by the event loop the next time the stack is empty
+
+#### Multiple setTimeout example
+
+```javascript
+setTimeout( () => {
+	console.log("done");
+}, 1000);
+
+setTimeout( () => {
+	console.log("done");
+}, 1000);
+
+setTimeout( () => {
+	console.log("done");
+}, 1000);
+
+setTimeout( () => {
+	console.log("done");
+}, 1000);
+```
+The steps are as follows:
+
+* Run the first setTimeout (pass it to the webapi, which waits for the timeout then push to callback queue)
+* Run the second setTimeout
+* Run the third setTimeout
+* Run the fourth setTimeout
+
+This means that the timeout time is a minimum time guarantee not an absolute. In this example, the fourth timeout callback will not run until 4 seconds have passed, even though the time specified is 1 second.
+
+#### Rendering example
+
+Rendering takes priority, but if the stack is blocked, render won't be given a chance
+
+#### Flooding the callback queue
+For example, doing a lot of scrolling triggers a ton of events that each get added to the queue. It's important when writing code to take this into consideration when writing code, and making sure that event processing is done in such a way as to not overwhelm the callback queue and event loop.
+
+
+[http://latentflip.com/loupe/
+](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
+
