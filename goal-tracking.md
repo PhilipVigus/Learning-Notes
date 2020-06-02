@@ -445,7 +445,127 @@ Overall I feel the week went well. I received really positive feedback about my 
 Goals
 
 * Do a process workshop in Javascript
+	* Attempted but not possible due to technical problems 
 * Build relationships with my two mentees
+	* Had two one-to-one chats which both went well
 * Build a front-end app in Javascript
+	* Did this during the afternoons, and also as part of the weekend challenge, where I started building a front-end using React
 * Work competently in Javascript 
+	* Definitely there with this one. I now feel reasonably comfortable with the basics in JS
 * Reason about asynchronous behaviour in Javascript
+	* This was a focus during the weekend challenge particularly, as I had to work out how to write asynchronous tests
+
+## Week 8 and 9
+
+Goals
+
+* High Level
+	* Diagram a high-level view of Rails MVC architecture
+	* Compare and contrast to another MVC framework
+	* Diagram the sequence of events when you run rails server
+	* Diagram a request and response cycle of a user interacting with the rails app
+* Concepts
+	* Evaluate the benefits and drawbacks of convention over configuration.
+		* Frameworks reduce the number of decisions a programmer has to make without losing flexibility
+		* The programmer only has to specify the unconventional aspects of their application. i.e. configuration is only required when you are doing something unconventional
+		* Drawbacks
+			* can make it difficult to use other programming design principles
+			* can make code difficult to alter if taken too far
+			* the conventions have to be well-designed and considered to avoid an overly restrictive framework 
+	* Describe the primary aspects of Rails that utilize this idiom.
+		* file and folder structure
+		* automatic route setup for resources
+	* Describe the asset pipeline.
+		* concatenates and minifies assets such as CSS and JS files to reduce the number of requests a browser has to make for them
+		* allows assets to be coded in other higher-level languages (erb, coffescript, sass etc). The pipeline auto-compiles these into JS, CSS etc
+	* Discuss the meaning of skinny controllers over fat controllers and skinny models over fat models and mechanisms to address these.
+* What is MVC?
+	* Working with Rails models (Active Model)
+		* Discuss the role of migrations in relation to source code control and application versioning.
+		* Identify the issues that can arise when doing the following:
+			* Editing migrations.
+			* Deleting migrations.
+			* Using models in a migration.
+	* Apply the following features of ActiveRecord:
+		* Validations.
+		* Associations.
+		* Scopes.
+	* Understand the following features of ActiveRecord:
+		* Callbacks.
+		* Query interface.
+	* Working with Rails controllers (Action Controller)
+		* Understand the relationship between resources and REST.
+		* Understand nested routing and how to restrict resources routes using except and only.
+		* Describe the Rails routing process from browser request through to controller action.
+		* Understand how to respond to requests for different formats (e.g. HTML/ JSON) on the same route.
+		* Describe controller filters and how these relate to controller inheritance.
+	* Working with Rails views (Action View)
+		* Describe the relationship between link_to and Rails routing.
+		* Differentiate between business logic and presentation logic and understand where in Rails this code should be.
+		* Evaluate at least two templating languages. What does whitespace agnostic mean?
+		* Consider the pros and cons with Rails views and consider alternatives
+* Testing
+	* Describe the different types of tests and their purpose you can use to test a rails app.
+	* Explain why most Rails web apps are feature and unit tested.
+	* Test a rails app with Capybara, RSpec, Cucumber, MiniTest
+* Tools
+	* Identify and utilize the main Rails Rake tasks and generators.
+	* Discuss the advantages of using Rails console.
+* Community
+	* Evaluate and implement some of the most popular libraries of code from the community, e.g.:
+		* Devise.
+			* Authentication gem - highly extensive, covers all the bases, lots of bells and whistles. Possibly too much for a simple application, but might be good to work out how to integrate it 
+		* FactoryBot.
+			* Alternate approach to setting up data for tests. Fixtures is the standard, defined in yml files. Factories can sit near or in the tests themselves, and are generally more flexible
+		* Shoulda.
+			* An extension to rspec/minitest that provides rails-specific matchers
+* Personal
+	* Complete a process workshop
+		* done
+	* Book a review
+		* done
+	* Resolve issues from last week
+		* done
+	* Complete a review
+		* done - feedback was broadly extremely positive. However, there was one aspect of the written review that I don't understand and need further clarification on from one of the course coaches 
+	* Complete a process workshop
+		* not done - on reflection I felt that the review by itself was sufficient for this week. I'll do a process workshop next week instead
+	* Get coach feedback on process workshop
+		* see above
+	* Practice using Jasmine with node
+		* I did this in preparation of my review when I was working out which language to use
+		
+Overall reflection from the two weeks
+
+* I found the two week project very intense and challenging, but also fun and very rewarding at the same time. The almost complete lack of time for individual learning and work was something I missed a lot and speaking with the other group members, they felt the same. I made a conscious effort during the two weeks to deliberately put myself in situations that stretched and challenged me, and I felt this paid off. For example, I volunteered to lead on the last day as I knew I struggled with this when I did the same on the last group project. This time though things went a lot more smoothly, and the feedback I got from the group on my leadership skills was uniformly positive.
+* On a more technical level, I learned a huge amount about using Ruby on Rails. I can't say I particularly enjoyed using the framework though, and found the sheer amount of 'cleverness' it does under the hood a little difficult to accept. I'm far used to having more direct control over the technologies I am using than that. However, I was impressed with what it could do, and am aware I've only just scratched the surface with its capabilities. Due to the emphasis our project took, I did not have the time to really explore much of the technical capabilities beyond what we directly used during the two weeks, which is why the list above is largely untouched. However, I plan to come back to Rails and explore it further, as I feel it at least deserves that.
+
+## Week 10 - Individual challenges
+
+After two intensive weeks of group work, I was expecting this week to be a relief, but I've actually found it really hard. It's very easy to get used to pair-programming and having a second person to 'back you up' when you're working. Going from that back to solitary coding for most of the week has been very strange and quite stressful.
+
+The first set of feedback I received from the coach was......extensive, and I found it demoralising. However, after my initial reaction and having worked through the issues they raised, I found the process extremely rewarding. It highlighted various areas of improvement that I might never have consider and showed me ways of thinking about my process that are going to really, really help in the long term.
+
+After that, things progressed much more smoothly. The second feedback I got was shorter (yay), but still raised some interesting and additional points for me to take on board.
+
+
+# Career plan/goals
+
+* Implement portfolio page
+	* career goals
+	* work philosophy
+	* CV link
+	* skills
+	* projects
+	* ways to contact
+	* github link
+	* fun ideas
+		* linux loading page
+		* personalised links
+		* squares -> circles and vice versa
+* Update CV and make it ready to use
+* Set up hosted domain for portfolio and projects
+* Start going to meetups
+* Identify companies I want to work for
+* Update LinkedIn
+* Identify job sites
