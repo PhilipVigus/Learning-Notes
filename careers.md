@@ -116,3 +116,37 @@ Generally don't duplicate information in multiple places (in general, but break 
 work in pairs
 be objective about yourself
 you can break the rules
+
+Job search kick off
+
+Job offer guarantee
+app.huntr.co/makersacademy/signup
+
+Today
+Look through terms and conditions
+Create a careers channel
+
+Course completion assessment
+Keep asking for feedback
+Job hunt on a daily basis
+Keep coding, apply for jobs, attend meetups
+Careers fairs - attend these when organised
+Github CV
+Apply for 5 jobs a week? There is no must here
+Read the Friday email and complete the weekly feedback form
+
+Month 1
+Micro workshops
+Career coaching sessions - 1 to 1
+Technical coaching
+Interview alert forms
+Ben - personal projects
+
+Month 2 and 3
+Accountability standups 11 am
+Technical coaching
+
+3 - 6
+Longer term coaching
+
+
