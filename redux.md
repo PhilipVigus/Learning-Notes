@@ -162,3 +162,76 @@ console.log(newState);
 4. Store notifies all subscribed components of the state change
 5. Components see if the part of the state they're interested in has changed
 6. If it has, the component rerenders
+
+## Asynchronous logic and thunks
+
+Thunks are redux functions that can contain asynchronous logic. A thunk is made up of an inner and outer function.
+
+The inner function accepts dispatch and getState as arguments, typically calling dispatch.
+The outer function returns the inner function, passing in the payload to be passed into the inner function's dispatch call. e.g.
+
+```javascript
+export const incrementAsync = (amount) => (dispatch) => {
+  setTimeout(() => {
+    dispatch(incrementByAmount(amount));
+  }, 1000);
+};
+```
+
+They can then be called in the same way as an action creator:
+
+```javascript
+store.dispatch(incrementAsync(5));
+```
+
+An example that fetches data:
+
+```javascript
+// the outside "thunk creator" function
+const fetchUserById = (userId) => {
+  // the inside "thunk function"
+  return async (dispatch, getState) => {
+    try {
+      // make an async call in the thunk
+      const user = await userAPI.fetchById(userId);
+      // dispatch an action when we get the response back
+      dispatch(userLoaded(user));
+    } catch (err) {
+      // If something went wrong, handle it here
+    }
+  };
+};
+```
+
+## useSelector
+
+A hook that extracts data from the store. All you need to do is pass in a selector function and it does the rest. The reason it's needed is that you can't pass the store directly into the component.
+
+```javascript
+const countPlusTwo = useSelector((state) => state.counter.value + 2);
+```
+
+IMPORTANT - useSelector is the hook the 'subscribes' a component to the store, allowing it to check whether to rerender when the state changes.
+
+## useDispatch
+
+A hook that gives the component the dispatch method from the store, allowing it to dispatch actions.
+
+## The Provider component
+
+Gives components access to the store.
+
+```javascript
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import store from "./app/store";
+import { Provider } from "react-redux";
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
+```
