@@ -95,6 +95,55 @@ console.log(currentValue);
 // 2
 ```
 
+### Slices
+
+A slice is a collection of redux reducer logic, actions, selectors etc that relate to a single feature in the app, e.g.
+
+```javascript
+import { createSlice } from "@reduxjs/toolkit";
+
+export const counterSlice = createSlice({
+  name: "counter",
+  initialState: {
+    value: 0,
+  },
+  reducers: {
+    increment: (state) => {
+      // Redux Toolkit allows us to write "mutating" logic in reducers. It
+      // doesn't actually mutate the state because it uses the immer library,
+      // which detects changes to a "draft state" and produces a brand new
+      // immutable state based off those changes
+      state.value += 1;
+    },
+    decrement: (state) => {
+      state.value -= 1;
+    },
+    incrementByAmount: (state, action) => {
+      state.value += action.payload;
+    },
+  },
+});
+
+export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+
+export default counterSlice.reducer;
+```
+
+createSlice automatically generates action creators and reducer functions:
+
+```javascript
+console.log(counterSlice.actions.increment());
+// {type: "counter/increment"}
+
+const newState = counterSlice.reducer(
+  { value: 10 },
+  counterSlice.actions.increment()
+);
+
+console.log(newState);
+// {value: 11}
+```
+
 ## Redux dataflow
 
 ### Initialisation
