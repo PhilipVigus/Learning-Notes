@@ -24,6 +24,8 @@ const addTodoAction = {
 };
 ```
 
+The payload MUST be plain JavaScript values like objects, arrays and primitives. NOT class instances, functions or other non-serialisable types.
+
 ### Action creators
 
 Action factories. Functions that create and return an action object, so you don't have to write the action out by hand each time you want one. e.g.
@@ -94,6 +96,8 @@ const currentValue = selectCounterValue(store.getState());
 console.log(currentValue);
 // 2
 ```
+
+Selectors can be extracted into their slices so they can be exported and used in multiple places. This reduces duplicate code.
 
 ### Slices
 
@@ -203,6 +207,40 @@ const fetchUserById = (userId) => {
 };
 ```
 
+### Fetching data with thunks
+
+Usual pattern:
+
+- Dispatch a 'start' action to indicate that the request is in progress
+- Make the async request
+- Depending on the result, dispatch a 'success' action containing the result data, or a 'failure' action containing error details. The reducer then clears loading state and processes the resulting data
+
+### createAsyncThunk
+
+Generates a thunk that automatically dispatches start, success and failure actions. e.g.
+
+```javascript
+// first argument is the action prefix
+// second argument is the callback function that should
+// return a promise containing data or a rejected, error promise
+export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
+  const response = await client.get("/fakeApi/posts");
+  return response.posts;
+});
+```
+
+Callback functions are typically written using async/await, as this allows the use of normal try/catch syntax.
+
+Thunks are dispatched in the usual way, and mean that components do not have to contain asynchronous code.
+
+```javascript
+useEffect(() => {
+  if (postStatus === "idle") {
+    dispatch(fetchPosts());
+  }
+}, [postStatus, dispatch]);
+```
+
 ## useSelector
 
 A hook that extracts data from the store. All you need to do is pass in a selector function and it does the rest. The reason it's needed is that you can't pass the store directly into the component.
@@ -211,7 +249,7 @@ A hook that extracts data from the store. All you need to do is pass in a select
 const countPlusTwo = useSelector((state) => state.counter.value + 2);
 ```
 
-IMPORTANT - useSelector is the hook the 'subscribes' a component to the store, allowing it to check whether to rerender when the state changes.
+IMPORTANT - useSelector is the hook the 'subscribes' a component to the store, allowing it to check whether to rerender when the state changes. It's really important that a component is only looking at the smallest bit of data that it's interested in, as this minimises the number of times it needs to rerender.
 
 ## useDispatch
 
@@ -234,4 +272,74 @@ ReactDOM.render(
   </Provider>,
   document.getElementById("root")
 );
+```
+
+## Prepare callback functions
+
+Each associated with a reducer, they provide a way of preparing the reducer's payload.
+
+```javascript
+const postsSlice = createSlice({
+  name: "posts",
+  initialState,
+  reducers: {
+    postAdded: {
+      reducer(state, action) {
+        state.push(action.payload);
+      },
+      prepare(title, content) {
+        return {
+          payload: {
+            id: nanoid(),
+            title,
+            content,
+          },
+        };
+      },
+    },
+    // other reducers here
+  },
+});
+```
+
+The action can now be dispatched with:
+
+```javascript
+dispatch(postAdded(title, content));
+```
+
+as it doesn't care about the exact format of the payload expected by the reducer.
+
+## extraReducers
+
+Allows a slice reducer to listen for actions not specified in this slice's reducer field.
+Used when a thunk is producing fulfilled/pending/rejected actions that the slice needs to respond to.
+
+```javascript
+export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
+  const response = await client.get("/fakeApi/posts");
+  return response.posts;
+});
+
+const postsSlice = createSlice({
+  name: "posts",
+  initialState,
+  reducers: {
+    // omit existing reducers here
+  },
+  extraReducers: {
+    [fetchPosts.pending]: (state, action) => {
+      state.status = "loading";
+    },
+    [fetchPosts.fulfilled]: (state, action) => {
+      state.status = "succeeded";
+      // Add any fetched posts to the array
+      state.posts = state.posts.concat(action.payload);
+    },
+    [fetchPosts.rejected]: (state, action) => {
+      state.status = "failed";
+      state.error = action.error.message;
+    },
+  },
+});
 ```
