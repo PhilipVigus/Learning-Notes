@@ -9,4 +9,4 @@ Transforms website names to ip addresses
 5. The ANS knows the full IP address for the full query, which is returned to the recursive resolver.
 6. The resolver tells the browser the IP, which sends a request to the website using it to retrieve its content.
 
-Caching is also a hugely important aspect of this process. At each stage listed above, the relevant server maintains a cache of the most common queries. This means that for commonly requested queries, the process can be significantly short-circuited.
+Caching is also a hugely important aspect of this process. At each stage listed above, the relevant server maintains a cache of the most common queries. This means that for commonly requested queries, the process can be significantly short-circuited. Browsers and computers themselves also maintain caches.
