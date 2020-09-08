@@ -121,3 +121,7 @@ type TripUpdateResponse {
 ```
 
 It is best practice for a mutation to return the objects it modifies so the client can update its cache and UI without having to make a followup query.
+
+### Schema exploration
+
+Running an GraphQL server and going to the url will open up GraphQL Playground, which allows you to introspect the schema and test out queries. NOte, introspection is disabled on production.
