@@ -125,3 +125,26 @@ It is best practice for a mutation to return the objects it modifies so the clie
 ### Schema exploration
 
 Running an GraphQL server and going to the url will open up GraphQL Playground, which allows you to introspect the schema and test out queries. NOte, introspection is disabled on production.
+
+## Data sources
+
+Any DB, service or API that holds data used to populate a schema's fields.
+
+With Apollo, you can extend the DataSource class to handle interaction logic.
+
+## Query resolvers
+
+A resolver is a function that populates a single field in the schema. Whenever a client queries for a particular field the resolver fetches the data from the appropriate data source.
+
+A resolver returns either the data, or a promise that fulfills with that data.
+
+```javascript
+// signature
+// parent = the return value of this field's parent resolver
+// args = all GraphQL arguments for this field
+// context = shared by all resolvers that execute for a particular operation
+// info = information about the execution state of the operation
+fieldName: (parent, args, context, info) => data;
+```
+
+It is best practice to keep resolvers thin, with most logic in the datasources they access.
