@@ -22,4 +22,16 @@
    - func.apply(thisObj, [args]);
    - funcWithThis = func.bind(thisObj);
 
-4.
+4. Explain prototypal inheritance
+
+   - Every object has a prototype associated with it
+   - Every prototype has a link to the next prototype in the 'chain', ending the the Object prototype (the [[prototype]] property, set with \_\_prototype\_\_)
+   - When a function is called with the new keyword
+     - an empty object is created
+     - the object's prototype is set to that of the called function
+     - 'this' is set to the new object
+     - the new object is returned unless something else is explicitly returned
+   - When an object is called with a method, and that method doesn't exist on the object, its prototype is checked for the same method. If it isn't found there, then the next prototype in the chain is checked etc etc
+   - it's important to note that changing a prototype, for example by adding a method, also changes those objects that use that prototype. i.e. the connection is still 'live', even after the object is created
+
+5.
