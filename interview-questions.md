@@ -69,3 +69,23 @@
 
     - native objects are defined by the ECMAScript specification, e.g. String, Array
     - host objects are defined by the hosting environment, e.g. Window, Element
+
+11. Explain the difference between: function Person(){}, var person = Person(), and var person = new Person()?
+
+    - function Person() {} - a function declaration. Is hoisted to the top of function scope. Called with Person()
+    - var person = Person() {} - a function expression. Not hoisted (avoids polluting global scope?). Called with person(). Can omit the function name to create an anonymous function. Can be used as part of an IIFE.
+    - var person = new Person() - creates a new object, assigns the prototype of Person to it, sets 'this' to point to the new object, returns the new object
+
+12. What's the difference between feature detection, feature inference, and using the UA string?
+
+    - feature detection - uses JS to establish whether the environment has access to a particular feature, eg local storage
+    - feature inference - uses existing features that have been established as available to infer the existence of other features
+    - UA (userAgent) string - gives information about the browser and system
+
+13. Explain "hoisting"
+
+    - when variables are moved to the top of their 'scoped context' as part of compilation before code is run
+      - var - hoisted to top of function (or global) context
+      - let - hoisted to top of block
+      - const - hoisted to top of block
+      - function declaration - hoisted to top of function
