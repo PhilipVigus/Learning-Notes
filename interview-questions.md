@@ -187,3 +187,130 @@
     - Object.freeze(obj) prevents reassigning properties on an object. This throws an error in strict mode, but just fails silently otherwise. However, it only freezes top-level properties and isn't 'deep'
     - spread syntax can be used to copy an object/arrays top level properties
     - Immer library (used by Redux), Immutable.js
+
+25. What is the event loop
+
+    - JavaScript is made up of a call stack, which keeps track of where you are in the execution of your code and a task queue. As JS is single-threaded, it can only do one thing at a time. For anything asynchronous it relies on webAPIs, which are provided by either the browser or node
+    - Functions are pushed onto the call stack, and popped off when they finish executing
+    - Asynchronous code triggers a call to the relevant webAPI, while the call stack continues to execute
+    - When the webAPI is complete, it pushes the result onto the task queue (it doesn't push straight back onto the call stack, as this could produce strange/corrupt results)
+    - The event loop checks the task queue whenever the call stack is empty. If there is something in the queue, it will dequeue the first item there and push it onto the call stack to be executed
+    - It is really important to note that items in the queue are only ever executed when the call stack is empty.
+
+26. What are the differences between variables created using let, var or const?
+
+    - var - earliest. Hoisted to function scope, or global if outside of a function. Can be redeclared
+    - let - introduced as part of ES6. Hoisted to block scope (but not initialised), can be updated but not redeclared
+    - const - introduced as part of ES6. Hoisted to block scope, must be initialised to a value at declaration. Cannot be updated or redeclared. Does not extend to 'deep' const-ness
+
+27. What are the differences between ES6 class and ES5 function constructors?
+
+    - class constructors are largely syntactic sugar for ES5 function constructors. The main difference is in the way they handle inheritance. The use of ES6 extends keyword automatically wires up the prototypes between the sub and super classes, so you don't have to manually do anything. The only thing you do have to make sure you do is call super().
+
+```js
+// ES5 Function Constructor
+function Student(name, studentId) {
+  // Call constructor of superclass to initialize superclass-derived members.
+  Person.call(this, name);
+  // Initialize subclass's own members.
+  this.studentId = studentId;
+}
+Student.prototype = Object.create(Person.prototype);
+Student.prototype.constructor = Student;
+
+// ES6 Class
+class Student extends Person {
+  constructor(name, studentId) {
+    super(name);
+    this.studentId = studentId;
+  }
+}
+```
+
+28. Can you offer a use case for the new arrow => function syntax? How does this new syntax differ from other functions?
+
+    - anonymous functions, useful for callbacks
+    - Don't set the 'this' context, it stays the same as the outer context
+    - don't need to return if it only has one expression, as it is implicitly returned
+
+29. What advantage is there for using the arrow syntax for a method in a constructor?
+
+- 'this' is the same in the arrow function and constructor
+
+30. What is the definition of a higher-order function?
+
+    - Functions that receive functions as arguments and/or return functions
+    - Allow actions to be abstracted and passed into and out of other functions
+
+31. Can you give an example for destructuring an object or an array?
+
+    - Used extensively with React
+
+```js
+const { id } = { id: 3, name: "Phil", age: 23 }; // id === 3
+const [a, b] = [1, 2, 3, 4]; // a === 1, b === 2
+```
+
+32. Can you give an example of generating a string with ES6 Template Literals?
+
+```js
+const name = "Bob";
+const message = `Hi ${name}, how are you doing?`; //-> Hi Bob, how are you doing?
+```
+
+33. Can you give an example of a curry function and why this syntax offers an advantage?
+
+    - Curry transforms a function from f(a, b, c) to f(a)(b)(c)
+    - Currying allows functions to be partially run, producing 'convenience' versions with some of the arguments set
+
+```js
+function curry(f) {
+  // curry(f) does the currying transform
+  return function (a) {
+    return function (b) {
+      return f(a, b);
+    };
+  };
+}
+```
+
+34. What are the benefits of using spread syntax and how is it different from rest syntax?
+
+- rest syntax collects all remaining function arguments into an array. Prior to this the arguments keyword was needed, which returned an array-like structure but not an actual array. Arguments also cannot be used in arrow functions, as there is no this context set
+
+```js
+function add(...args) {
+  let result = 0;
+
+  for (let arg of args) result += arg;
+
+  return result;
+}
+```
+
+    - the spread operator 'spreads' the elements of an array into a new array, and can be used to make a copy of an array
+
+```js
+const arr = ["Joy", "Wangari", "Warugu"];
+const newArr = ["joykare", ...arr];
+```
+
+35. How can you share code between files?
+
+- module pattern with IIFE
+
+```js
+const mod = (() => {
+  let privateVar = 0;
+
+  const privateFunc = () => {};
+
+  return {
+    pubFunc1: () => {},
+    pubFunc2: () => {},
+  };
+})();
+```
+
+- ES6 modules with exports and imports
+- node modules
