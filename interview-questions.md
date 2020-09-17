@@ -89,3 +89,41 @@
       - let - hoisted to top of block
       - const - hoisted to top of block
       - function declaration - hoisted to top of function
+
+14. Describe event bubbling and event capturing
+
+    - when an event is triggered, it starts on the element highest in the dom, trickles down to the lowest, and bubbles back up again. Capturing takes place during the down phase, and bubbling is the up phase (and default)
+
+15. What's the difference between an "attribute" and a "property"?
+
+    - attributes exist in HTML
+    - properties exist on the DOM and are accessible through JavaScript
+    - most default attributes have property equivalents, and the two are usually kept in sync
+
+16. What are the pros and cons of extending built-in JavaScript objects?
+
+    - Generally considered a bad thing
+      - breaks default functionality
+      - JS might provide that functionality in the future, overriding yours
+      - can affect other, 3rd party libraries
+      - overwriting existing functionality is 'silent' and not necessarily clear to other users or your code
+
+17. What is the difference between == and ===?
+
+    - == - loose equality. If the two sides are not the same type, then performs implicit coercion before comparison
+      - 2 == '2' // true
+      - avoid if possible, as there are some difficult to predict results
+        - NaN == NaN // false
+        - 4 + [1, 2] = "41, 2"
+        - 4 \* [1, 2] = NaN
+        - true + true = 2
+        - etc
+    - === - strict equality. The two sides must be the same type
+
+18. What are truthy and falsy values?
+
+    - falsy
+      - false, 0, "", null, undefined, NaN
+      - values that coerce to false when used as a boolean value
+    - truthy
+      - anything else
