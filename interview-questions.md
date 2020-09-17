@@ -34,4 +34,17 @@
    - When an object is called with a method, and that method doesn't exist on the object, its prototype is checked for the same method. If it isn't found there, then the next prototype in the chain is checked etc etc
    - it's important to note that changing a prototype, for example by adding a method, also changes those objects that use that prototype. i.e. the connection is still 'live', even after the object is created
 
-5.
+5. What's the difference between a variable that is: null, undefined or undeclared?
+
+   - undeclared is when you try to use a variable that has not been previously declared with either var, let or const. Test with try..catch block
+   - undefined is when a variable has been declared with var or let, but its value has not yet been set. Test with typeof 'undefined'
+   - null is when a variable's value has explicitly been set to null. Test with var === 'null'
+
+6. What is a closure, and how/why would you use one?
+
+   - A closure applies when a function is called outside of the context in which it was created
+   - Every function has a lexical environment, which includes all local variables in the scope that creates the function, and a link to the 'next' parent lexical environment
+   - A closure allows a function to access its lexical environment (and the parents of that le etc), even when that environment has gone out of scope
+   - A closure is created for each instance of a specific function
+   - Closures can cause problems with garbage collection, so it's important to discard function references when they're no longer being used
+   - Example uses - 'private' variables
