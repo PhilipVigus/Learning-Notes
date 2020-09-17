@@ -314,3 +314,77 @@ const mod = (() => {
 
 - ES6 modules with exports and imports
 - node modules
+
+## HTML
+
+1.  What does a doctype do?
+
+    - associates a document with a Doc Type Definition, the formal definition of a particular version of HTML. In its absence, a browser will run in 'quirks' mode
+
+2.  How do you serve a page with content in multiple languages?
+
+    - explicitly set as part of url
+    - allow user to specify and set in session/cookies
+    - guess the preference from the request header (Accept-Language)
+    - for multiple languages on the same page, use the lang attribute (\<html lang="de">)
+    - use utf-8 encoding
+
+3.  What kind of things must you be wary of when design or developing for multilingual sites?
+
+    - text direction
+    - date and number formats
+    - don't concatenate translated strings
+
+4.  What are data- attributes good for?
+
+    - allow storing extra meta-information as part of HTML
+
+5.  Consider HTML5 as an open web platform. What are the building blocks of HTML5?
+
+    - Semantics: allowing you to describe more precisely what your content is.
+    - Connectivity: allowing you to communicate with the server in new and innovative ways.
+    - Offline and storage: allowing webpages to store data on the client-side locally and operate offline more efficiently.
+    - Multimedia: making video and audio first-class citizens in the Open Web.
+    - 2D/3D graphics and effects: allowing a much more diverse range of presentation options.
+    - Performance and integration: providing greater speed optimization and better usage of computer hardware.
+    - Device access: allowing for the usage of various input and output devices.
+    - Styling: letting authors write more sophisticated themes.
+
+6.  Describe the difference between a cookie, sessionStorage and localStorage.
+
+    - LocalStorage
+      - Stores data with no expiration date, and gets cleared only through JavaScript, or clearing the Browser cache / Locally Stored Data
+      - Storage limit is the maximum amongst the three
+    - SessionStorage
+      - The sessionStorage object stores data only for a session, meaning that the data is stored until the browser (or tab) is closed.
+      - Data is never transferred to the server.
+      - Storage limit is larger than a cookie (at least 5MB).
+    - Cookie
+      - Stores data that has to be sent back to the server with subsequent requests. Its expiration varies based on the type and the expiration duration can be set from either server-side or client-side (normally from server-side).
+      - Cookies are primarily for server-side reading (can also be read on client-side), localStorage and sessionStorage can only be read on client-side.
+      - Size must be less than 4KB.
+        -Cookies can be made secure by setting the httpOnly flag as true for that cookie. This prevents client-side access to that cookie
+
+7.  Describe the difference between \<script>, \<script async> and \<script defer>.
+
+    - script - loads the script synchronously
+    - async - loads it async while continuing to interpret the page
+    - defer - async, guaranteeing load order
+
+8.  Why is it generally a good idea to position CSS \<link>s between \<head>\</head> and JS \<script>s just before \</body>? Do you know any exceptions?
+
+    - CSS - prevents FOUC
+    - JS - allows page to load before loading scripts, which might slow things down. Avoid only if the script is needed before the DOM is loaded
+
+9.  What is progressive rendering?
+
+    - load only the things you needing using techniques such as lazy loading, prioritising visible content
+
+10. Why you would use a srcset attribute in an image tag? Explain the process the browser uses when evaluating the content of this attribute.
+
+    - specifies different sized images depending on criteria specified in the image tag, eg width or density
+    - specifies choices for the browser
+
+11. Have you used different HTML templating languages before?
+
+    - ERB (rails), PUG (Express)
