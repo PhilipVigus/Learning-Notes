@@ -127,3 +127,63 @@
       - values that coerce to false when used as a boolean value
     - truthy
       - anything else
+
+19. Explain the same-origin policy with regards to JavaScript.
+
+    - A script can interact with content and properties that have the same origin as the page that contains the script. The policy restricts based on the origin of the content rather than the origin of the script
+    - same origin
+      - protocol + port + host must all be the same
+      - http://www.example.com/bar === http://www.example.com/foo
+    - embedding a cross origin resource is usually allowed
+      - iframes
+      - css
+      - forms
+      - images
+      - multimedia
+      - scripts (with restrictions)
+
+20. Why is it called a Ternary operator, what does the word "Ternary" indicate?
+
+    - ternary relates to the 3 arguments that the operator takes
+      - condition ? do_if_true : do_if_false
+
+21. What is strict mode? What are some of the advantages/disadvantages of using it?
+
+    - invoke with 'use strict'; either at the top of a script, within an individual function, or as part of a module export
+    - changes it enforces
+      - you cannot accidentally create global variables (ie, using a variable without declaring it with const, let or var throws an error)
+      - you cannot delete variables
+      - turns silently-failing code into errors
+        - assigning to non-writable globals like undefined
+        - assigning to non-writable properties
+        - assignment to getters
+      - attempting to delete undeletable objects throws an exception
+      - function parameter names must be unique
+      - you cannot set properties on primitive values
+      - prohibits use of the with keyword
+      - prevents eval introducing new variables into the surrounding scope
+      - the this value is no longer 'boxed'. This means it's no longer forced to be a value, which is important for browsers. Without strict, this outside of the context of a function will point to Window, which is a security flaw. With strict, it will be undefined
+      - it prohibits the use of keywords that will be used in future versions of Javascript
+
+22. What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+
+    - addition of features such as classes, OOP, strong typing
+    - makes the pipeline more complex, requiring babel, webpack, gulp etc
+
+23. What tools and techniques do you use debugging JavaScript code?
+
+    - read the error message, tighten the loop, get visibility, fix the bug
+    - console.log
+    - react/redux extensions
+    - chrome dev tools/VS Code
+      - break points, watches etc
+
+24. Explain the difference between mutable and immutable objects.
+
+    - mutable objects can have their state changed after creation, immutable ones cannot
+    - objects are mutable, primitives are immutable
+    - when you assign an immutable variable, it creates a copy. Changing the original does not change the copy
+    - when you assign a mutable variable, it creates a reference. Changing the original also changes the copy
+    - Object.freeze(obj) prevents reassigning properties on an object. This throws an error in strict mode, but just fails silently otherwise. However, it only freezes top-level properties and isn't 'deep'
+    - spread syntax can be used to copy an object/arrays top level properties
+    - Immer library (used by Redux), Immutable.js
