@@ -388,3 +388,91 @@ const mod = (() => {
 11. Have you used different HTML templating languages before?
 
     - ERB (rails), PUG (Express)
+
+## CSS
+
+1. What is CSS selector specificity and how does it work?
+
+   - allows the browser to decide which CSS rule to apply when two conflict
+   - inline styles (+1000) > IDs (+100) > classes, attributes, pseudo-classes (+10) > elements and pseudo-elements (+1)
+   - sum up for each selector, the highest wins when there is a conflict
+   - if still equal, the latest rule wins
+
+2. What’s the difference between “resetting” and “normalizing” CSS? Which would you choose, and why?
+
+   - resetting removes all browser formatting
+   - normalising makes it consistent and is generally more opinionated. It tends to have wider scope, fixing bugs, is more modular and has better documentation
+
+3. Describe Floats and how they work.
+
+   - The float CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow
+   - Floated elements are shifted until they touch the edge of their containing box, or another floated element
+
+4. Describe z-index and how stacking context is formed.
+
+   - z-index dictates how elements overlap when rendered on the page
+   - stacking contexts apply to elements in certain situations, and within each context, the z-indexes of the child elements dictate their render order
+
+5. Describe BFC (Block Formatting Context) and how it works.
+
+   - https://www.smashingmagazine.com/2017/12/understanding-css-layout-block-formatting-context/
+
+6. What are the various clearing techniques and which is appropriate for what context?
+
+   - Empty div method - \<div style="clear:both;">\</div>.
+   - Clearfix method — Refer to the .clearfix class above.
+   - overflow: auto or overflow: hidden method - Parent will establish a new block formatting context and expand to contains its floated children.
+
+7. How would you approach fixing browser-specific styling issues?
+
+   - browser-specific style sheet
+   - Boostrap et al
+   - autoprefixer
+   - reset or normalize
+
+How do you serve your pages for feature-constrained browsers?
+What techniques/processes do you use?
+
+What are the different ways to visually hide content (and make it available only for screen readers)?
+
+Have you ever used a grid system, and if so, what do you prefer?
+
+Have you used or implemented media queries or mobile specific layouts/CSS?
+
+Are you familiar with styling SVG?
+
+Can you give an example of an @media property other than screen?
+
+What are some of the “gotchas” for writing efficient CSS?
+
+What are the advantages/disadvantages of using CSS preprocessors?
+Describe what you like and dislike about the CSS preprocessors you have used.
+
+How would you implement a web design comp that uses non-standard fonts?
+
+Explain how a browser determines what elements match a CSS selector.
+
+Describe pseudo-elements and discuss what they are used for.
+
+Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models.
+
+What does \* { box-sizing: border-box; } do? What are its advantages?
+
+What is the CSS display property and can you give a few examples of its use?
+
+What’s the difference between inline and inline-block?
+
+What’s the difference between the “nth-of-type()” and “nth-child()” selectors?
+
+What’s the difference between a relative, fixed, absolute and statically positioned element?
+
+What existing CSS frameworks have you used locally, or in production? How would you change/improve them?
+
+Have you used CSS Grid?
+
+Can you explain the difference between coding a web site to be responsive versus using a mobile-first strategy?
+
+Have you ever worked with retina graphics? If so, when and what
+techniques did you use?
+
+Is there any reason you’d want to use translate() instead of absolute positioning, or vice-versa? And why?
