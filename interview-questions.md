@@ -48,3 +48,24 @@
    - A closure is created for each instance of a specific function
    - Closures can cause problems with garbage collection, so it's important to discard function references when they're no longer being used
    - Example uses - 'private' variables
+
+7. What language constructions do you use for iterating over object properties and array items?
+
+   - Standard for loop
+   - forEach, map, select, filter, reduce - easy to access the current index
+   - for...in - iterates over ALL properties, including non-numeric
+   - for...of - most robust approach, only iterates over numeric properties, hard to access the current index, doesn't skip empty elements
+
+8. Can you describe the main difference between the Array.forEach() loop and Array.map() methods and why you would pick one versus the other?
+
+   - forEach - calls the specified function on each of the elements in the array in turn. Returns undefined, so is not chainable
+   - map - calls the specified function on each element, converting the element to whatever the function returns. Returns a new array with the changed elements. Chainable
+
+9. What's a typical use case for anonymous functions?
+
+   - Passed as callbacks into methods that iterate over arrays and objects
+
+10. What's the difference between host objects and native objects?
+
+    - native objects are defined by the ECMAScript specification, e.g. String, Array
+    - host objects are defined by the hosting environment, e.g. Window, Element
