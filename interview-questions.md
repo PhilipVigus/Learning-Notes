@@ -481,10 +481,32 @@ Is there any reason you’d want to use translate() instead of absolute position
 
 #### High Level
 
-Diagram a high-level view of Rails MVC architecture
-Compare and contrast to another MVC framework
-Diagram the sequence of events when you run rails server
-Diagram a request and response cycle of a user interacting with the rails app
+1. Diagram a high-level view of Rails MVC architecture
+2. Compare and contrast to another MVC framework
+3. Diagram the sequence of events when you run rails server
+
+- Set APP_PATH to ./config/application.rb
+- Set ENV['BUNDLE_GEMFILE'] to ./Gemfile
+- Setup Bundler (without requiring gems yet)
+- Initialize a new Rails::Server (subclass of Rack::Server)
+- Require all Rails components (ActiveRecord, ActionPack, etc.)
+- Require all gems from your Gemfile
+- Define an Application that is a subclass of Rails::Application
+- Change directory to the root of your Rails application
+- Start the Rails::Server initialized earlier
+- Run Rails hooks in an orderly manner (load configuration, run initializers, etc.)
+- Your server is now waiting for requests!
+
+4. Diagram a request and response cycle of a user interacting with the rails app
+
+- user types url, browser makes request to server
+- router maps url to controller and action
+- controller/action handles request
+- action asks model to fetch data from database
+- model returns data
+- controller passes data to view
+- view renders page as HTML
+- controller sends HTML back to client
 
 #### Concepts
 
@@ -493,7 +515,7 @@ Describe the primary aspects of Rails that utilize this idiom.
 Describe the asset pipeline.
 Discuss the meaning of skinny controllers over fat controllers and skinny models over fat models and mechanisms to address these.
 
-### What is MVC?
+### Rails MVC s
 
 #### Working with Rails models (Active Model)
 
