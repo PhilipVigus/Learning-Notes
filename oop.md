@@ -58,3 +58,4 @@ Depend on abstractions, not concretions
 - Not enough focus on computation or algorithms
 - More complex to write and longer to compile
 - Composition over inheritance
+  - classes should be polymorphic based on contained classes that implement common interfaces rather than behaviour inherited from parent classes
