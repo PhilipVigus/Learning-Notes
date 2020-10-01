@@ -542,18 +542,39 @@ Is there any reason you’d want to use translate() instead of absolute position
 
 #### Working with Rails models (Active Model)
 
-Discuss the role of migrations in relation to source code control and application versioning.
-Identify the issues that can arise when doing the following:
-Editing migrations.
-Deleting migrations.
-Using models in a migration.
-Apply the following features of ActiveRecord:
-Validations.
-Associations.
-Scopes.
-Understand the following features of ActiveRecord:
-Callbacks.
-Query interface.
+1. Discuss the role of migrations in relation to source code control and application versioning.
+
+   Migrations are to databases as git is to source control. They record the changes you make to a database structure incrementally and allow you to rollback as and when needed
+
+2. Identify the issues that can arise when doing the following:
+
+   - Editing migrations.
+   - Deleting migrations.
+   - Using models in a migration.
+
+3. Apply the following features of ActiveRecord:
+
+   - Validations.
+
+     Validate model/record attributes, for example string length, data type, number ranges
+
+   - Associations.
+
+     Specify database relationships such as one-to-many
+
+   - Scopes.
+
+     Turn commonly used queries into method calls that can be used elsewhere
+
+4. Understand the following features of ActiveRecord:
+
+   - Callbacks.
+
+   Methods that get called at specific points in an object's lifecycle, eg before_validation, before_create, after_destroy
+
+   - Query interface.
+
+   Allows querying the database without using raw SQL, eg find, take, first, find_by
 
 #### Working with Rails controllers (Action Controller)
 
