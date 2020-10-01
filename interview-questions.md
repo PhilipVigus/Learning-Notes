@@ -578,11 +578,20 @@ Is there any reason you’d want to use translate() instead of absolute position
 
 #### Working with Rails controllers (Action Controller)
 
-Understand the relationship between resources and REST.
-Understand nested routing and how to restrict resources routes using except and only.
-Describe the Rails routing process from browser request through to controller action.
-Understand how to respond to requests for different formats (e.g. HTML/ JSON) on the same route.
-Describe controller filters and how these relate to controller inheritance.
+1. Understand the relationship between resources and REST.
+
+   Resources set up routes to controllers covering the basic CRUD operations. The mapping specifies the controller for the resource, and a method within the controller based on the HTTP method called on the route
+
+2. Understand nested routing and how to restrict resources routes using except and only.
+
+   Used when a resource is logically the child of another, parent resource, eg article > comment. Specifies the route path as being
+   article/:id/comment/:id
+
+3. Describe the Rails routing process from browser request through to controller action.
+4. Understand how to respond to requests for different formats (e.g. HTML/ JSON) on the same route.
+5. Describe controller filters and how these relate to controller inheritance.
+
+   Filters are hooks that run before, after or around controller actions, eg before_action
 
 #### Working with Rails views (Action View)
 
