@@ -510,10 +510,33 @@ Is there any reason you’d want to use translate() instead of absolute position
 
 #### Concepts
 
-Evaluate the benefits and drawbacks of convention over configuration.
-Describe the primary aspects of Rails that utilize this idiom.
-Describe the asset pipeline.
-Discuss the meaning of skinny controllers over fat controllers and skinny models over fat models and mechanisms to address these.
+1. Evaluate the benefits and drawbacks of convention over configuration.
+
+- Benefits
+
+  - Fewer decisions
+  - Quicker results
+  - More productivity
+
+- Drawbacks
+  - Conflicts with other design philosophies
+  - Okay as long as what you want to do fits with their conventions
+  - Less, more difficult to achieve customisation
+
+2. Describe the primary aspects of Rails that utilize this idiom.
+
+- The file and project structure
+- CRUD routes and links to controllers and their methods
+- Links between table names and model classes
+- Class names in general
+- Autoloading of class definitions
+
+3. Describe the asset pipeline.
+
+- Concatenates, minifise/compresses JavaScript and CSS assets
+- Provides preprocessers to write these assets in other languages such as SASS, Coffeescript and ERB
+
+4. Discuss the meaning of skinny controllers over fat controllers and skinny models over fat models and mechanisms to address these.
 
 ### Rails MVC s
 
